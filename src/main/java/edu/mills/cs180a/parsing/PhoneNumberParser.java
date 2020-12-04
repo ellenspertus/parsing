@@ -21,6 +21,12 @@ package edu.mills.cs180a.parsing;
  *
  */
 public abstract class PhoneNumberParser {
+
+    /**
+     * Constructs a {@code PhoneNumberParser}.
+     */
+    public PhoneNumberParser() {}
+
     /**
      * Gets the <a href="https://en.wikipedia.org/wiki/Telephone_prefix">prefix </a> of a phone
      * number.

@@ -9,11 +9,9 @@ public class Example {
     private static final Pattern PHONE_PATTERN = Pattern.compile(PHONE_REGEX);
 
     public static void main(String[] args) {
-        Matcher matcher = PHONE_PATTERN.matcher(MILLS_NUMBER);
-        if (matcher.find()) {
-            System.out.println(matcher.group(0));
-            System.out.println(matcher.group(1));
-        }
+        PhoneNumberParser myParser = new RegexParser();
+        System.out.println(myParser.getPrefix(MILLS_NUMBER.substring(2)));
+        // System.out.println(myParser.getPrefix("430-2011")); // IllegalArgumentException
     }
 }
 
